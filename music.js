@@ -35,7 +35,9 @@ class Music {
         setTimeout(() => {
           return this.mopidy.playback.getCurrentTrack()
             .then(track => {
-              this.handleTweet(track);
+              console.log(track);
+              if (track)
+                this.handleTweet(track);
             })
         }, 100)
       })
