@@ -1,0 +1,16 @@
+{
+  "name": "portablemusic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mopidy": "^0.5.0",
+    "onoff": "^1.1.9",
+    "twitter": "^1.7.1"
+  },
+  "author": "Åsa Liljegren",
+  "license": "ISC"
+}
