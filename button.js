@@ -12,7 +12,7 @@ class Button {
   }
 
   setupButton() {
-    this.setBlinkTimer();
+    this.startBlink();
 
     this.pushGpio.watch((err) => {
       if (err)
