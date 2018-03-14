@@ -2,8 +2,9 @@ const Mopidy = require("mopidy");
 
 class Music {
 
-  constructor(handleTweet) {
+  constructor(handleTweet, handlePlaylistLoaded) {
     this.handleTweet = handleTweet;
+    this.handlePlaylistLoaded = handlePlaylistLoaded;
 
     this.mopidy = new Mopidy({
       webSocketUrl: "ws://127.0.0.1:6680/mopidy/ws/"
@@ -23,6 +24,7 @@ class Music {
         this.mopidy.tracklist.setRandom(true);
         this.mopidy.tracklist.add(playlist.tracks)
       })
+      .then(() => this.handlePlaylistLoaded())
       .catch(() => console.error.bind(console))
       .done();
   }
