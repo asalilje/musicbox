@@ -22,7 +22,7 @@ class Music {
         this.mopidy.tracklist.setSingle(true);
         this.mopidy.tracklist.add(playlist.tracks)
       })
-      .then(() => this.mopidy.tracklist.shuffle)
+      .then(() => this.mopidy.tracklist.shuffle())
       .catch(() => console.error.bind(console))
       .done();
   }
