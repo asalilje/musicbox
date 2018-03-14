@@ -12,13 +12,18 @@ const handleTweet = (track, name) => {
   twitter.tweet(`Someone pressed a blinking button so now I'm playing '${track.name}'. ${link}`);
 };
 
+const handlePlaylistLoaded = () => {
+  button.setupButton();
+};
+
 let twitter;
 let music;
+let button;
 
 const boot = () => {
   try {
     twitter = new Twitter();
-    music = new Music(handleTweet);
+    music = new Music(handleTweet, handlePlaylistLoaded);
     button = new Button(handlePlay);
   }
   catch(err) {

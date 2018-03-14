@@ -8,11 +8,10 @@ class Button {
     this.pushGpio = new GPIO(2, 'in', 'falling');
     this.active = false;
     this.blinkInterval;
-    this.setupButton();
   }
 
   setupButton() {
-    this.setBlinkTimer();
+    this.startBlink();
     this.pushGpio.watch((err) => {
       if (err)
         console.log(err);
