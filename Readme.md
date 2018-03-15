@@ -12,4 +12,5 @@ Some environment values needs to be added:
 
 The button blinks for 10 seconds with a 20 seconds interval. During this time it is active. When a song is played, a tweet is made about it.
 
-Link to blogpost on how to set up your pi and run this using Docker: 
+Docker image: asalilje/portablemusic
+Link to blogpost on how to set up your pi and run this using Docker: http://reallyshouldblogthis.blogspot.se/2018/03/build-raspberry-pi-musicbox-using.html
